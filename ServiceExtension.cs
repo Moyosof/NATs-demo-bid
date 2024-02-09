@@ -1,4 +1,5 @@
 ﻿using BidService.Data;
+using BidService.NatSubscriberService;
 using BidService.Repository;
 using Microsoft.EntityFrameworkCore;
 using NATS.Client;
@@ -34,6 +35,8 @@ namespace BidService
             var natsUrl = Configuration.GetValue<string>("Nats:Url");
             services.AddSingleton(new NatsConnector(natsUrl));
 
+
+            services.AddHostedService<NatsSubscriberService>();
 
         }
     }

@@ -132,18 +132,6 @@ namespace BidService.Repository
                 BidId = bid.Id,
             };
         }
-
-        //public async Task<BidResponse> ProcessAuctionCreatedAsync(AuctionCreatedDto auctionCreatedDto)
-        //{
-        //    var bidAmount = auctionCreatedDto.StartingPrice + 100; // Example logic
-
-        //    var bidPlacedDto = new BidPlacedDto
-        //    {
-        //        AuctionId = auctionCreatedDto.Id,
-        //        BidAmount = bidAmount
-        //    };
-
-        //    return await PlaceBidAsync(bidPlacedDto);
-        //}
+        
     }
 }
